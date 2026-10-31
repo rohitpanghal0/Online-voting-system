@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+Results: {{ election.title }}
+{% for r in rows %} {% endfor %}
+Candidate
+Position
+Votes
+{{ r.name }}
+{{ r.position }}
+{{ r.total }}
+Back {% endblock %}
