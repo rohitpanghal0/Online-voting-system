@@ -1,0 +1,5 @@
+Online Voting
+{% if session.user_id %} {% if session.role == 'admin' %}Admin{% endif %} Logout {% else %} Login Register {% endif %}
+{% with messages = get_flashed_messages() %} {% for m in messages %}
+{{ m }}
+{% endfor %} {% endwith %} {% block content %}{% endblock %}
