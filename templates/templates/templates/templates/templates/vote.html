@@ -1,0 +1,5 @@
+{% extends "base.html" %} {% block content %}
+{{ election.title }}
+{% for c in candidates %} {{ c.name }} ({{ c.position }}) 
+{% endfor %} Cast Vote
+{% endblock %}
