@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+Open Elections
+{% for e in elections %}
+{{ e.title }}
+Vote Now
+{% else %}
+No elections are open right now.
+{% endfor %} {% endblock %}
