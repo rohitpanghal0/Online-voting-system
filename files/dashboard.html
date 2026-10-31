@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Open Elections</h2>
+{% for e in elections %}
+  <div class="card p-3 mb-2">
+    <h5>{{ e.title }}</h5>
+    <a class="btn btn-success" href="/vote/{{ e.id }}">Vote Now</a>
+  </div>
+{% else %}
+  <p>No elections are open right now.</p>
+{% endfor %}
+{% endblock %}
