@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+Admin Panel
+Create Election
+Create
+Add Candidate
+    {% for e in elections %}{{ e.title }}{% endfor %}
+   Add
+Elections
+{% for e in elections %} {% endfor %}
+Title
+Status
+Actions
+{{ e.title }}
+{{ 'Open' if e.is_open else 'Closed' }}
+{{ 'Close' if e.is_open else 'Open' }}
+Results
+{% endblock %}
